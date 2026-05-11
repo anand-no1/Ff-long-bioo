@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Thory Bio Tool</title>
+<title>CHAOS LONG BIO</title>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -118,6 +118,27 @@ select.inp { appearance:none; cursor:pointer; }
 .fmt-btn-icon { font-size:1.2rem; color:var(--txt); font-family:serif; }
 .fmt-btn-lbl { font-size:0.6rem; font-weight:700; letter-spacing:1px; }
 
+/* COLOR GRID */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+.color-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 2px solid var(--bd);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.color-swatch:hover {
+  transform: scale(1.15);
+  border-color: #fff;
+  z-index: 10;
+}
+
 /* TEXTAREA & PREVIEW */
 .textarea-bio {
   width:100%; padding:14px; background:var(--bg3); border:1px solid var(--bd);
@@ -152,6 +173,16 @@ select.inp { appearance:none; cursor:pointer; }
 .tpl-card:hover { border-color:var(--acc); }
 .tpl-name { color:var(--acc); font-size:0.8rem; font-weight:700; margin-bottom:4px;}
 .tpl-preview { font-size:0.8rem; color:var(--txt2); white-space:pre-wrap;}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 10px 0 20px 0;
+  color: var(--txt3);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
 </style>
 </head>
 <body>
@@ -161,7 +192,7 @@ select.inp { appearance:none; cursor:pointer; }
 <div class="topbar">
   <div class="brand">
     <div class="brand-img">⚡</div>
-    <div class="brand-name" id="siteName">LONG BIO</div>
+    <div class="brand-name" id="siteName">CHAOS LONG BIO</div>
   </div>
   <div class="topbar-btns">
     <button class="icon-btn" onclick="toast('Settings coming soon')">⚙️</button>
@@ -176,6 +207,28 @@ select.inp { appearance:none; cursor:pointer; }
 
   <div id="page-bio" class="page active">
     
+    <div class="card" style="border-color: var(--acc); background: rgba(255, 209, 36, 0.03);">
+      <div class="sec-label"><span>📖</span> FOR USERS - How to Use</div>
+      <div style="font-size: 0.85rem; color: var(--txt2); line-height: 1.6;">
+        <strong style="color: var(--txt);">Step 1: Get Your EAT Token</strong><br>
+        • Go to: CLICK THE "GET ACCESS TOKEN" button below.<br>
+        • Login with your Free Fire account.<br>
+        • THEN GO TO THE HISTORY AND COPY THE SECOND WEBSITE URL (WILL DISPLAY THE SAME WEBSITE 2 TIMES JUST COPY THE SECOND URL).<br>
+        • Copy That EAT/Access Token.<br><br>
+        
+        <strong style="color: var(--txt);">Step 2: Use the Tool</strong><br>
+        • Paste your token in the input box.<br>
+        • Your UID and Region will auto-load.<br>
+        • Type your bio or pick a template.<br>
+        • Click "Apply Bio to Free Fire".<br><br>
+
+        <strong style="color: var(--txt);">Step 3: Check Your Profile</strong><br>
+        • Open Free Fire.<br>
+        • Go to your profile.<br>
+        • Bio updated instantly!
+      </div>
+    </div>
+
     <div class="card">
       <div class="sec-label"><span>🌐</span> STEP 1: SELECT REGION</div>
       <select id="regionSelect" class="inp">
@@ -189,6 +242,9 @@ select.inp { appearance:none; cursor:pointer; }
 
     <div class="card">
       <div class="sec-label"><span>🔑</span> STEP 2: ACCESS TOKEN</div>
+      <button class="btn-primary" style="margin-bottom: 12px; background: #1da1f2; color: #fff; padding: 12px; font-size: 1rem;" onclick="window.open('https://ticket.kiosgamer.co.id/', '_blank')">
+        🔗 GET ACCESS TOKEN
+      </button>
       <div class="token-row">
         <input type="text" id="tokenInput" class="inp" placeholder="Paste your access token here..." oninput="onTokenInput()">
         <button class="paste-btn" onclick="pasteToken()">📋</button>
@@ -218,16 +274,9 @@ select.inp { appearance:none; cursor:pointer; }
           <div class="fmt-btn-lbl">UNDERLINE</div>
         </button>
       </div>
-      
-      <select class="inp" id="quickColor" style="margin-top:10px;" onchange="if(this.value) ins(this.value); this.value='';">
-        <option value="">🎨 Select Color Code...</option>
-        <option value="[FF0000]">Red</option>
-        <option value="[FFD124]">Gold</option>
-        <option value="[00FF00]">Green</option>
-        <option value="[00FFFF]">Cyan</option>
-        <option value="[FF00FF]">Pink</option>
-        <option value="[FFFFFF]">White</option>
-      </select>
+
+      <div class="sec-label" style="margin-top: 16px;"><span>🎨</span> COLOR CODES (TAP TO INSERT)</div>
+      <div class="color-grid" id="colorGrid"></div>
     </div>
 
     <div class="card">
@@ -246,6 +295,8 @@ select.inp { appearance:none; cursor:pointer; }
     <button class="btn-primary" id="applyBtn" onclick="applyBio()">
       ⚡ UPDATE BIO
     </button>
+    
+    <div class="footer">DEVELOPED BY ANAND</div>
 
   </div>
 
@@ -255,6 +306,7 @@ select.inp { appearance:none; cursor:pointer; }
       <p style="color:var(--txt2); font-size:0.85rem; margin-bottom:12px;">Tap any template to load it into the editor.</p>
       <div id="templateList"></div>
     </div>
+    <div class="footer">DEVELOPED BY ANAND</div>
   </div>
 
 </div>
@@ -281,7 +333,7 @@ const CFG = {{ config | tojson }};
 
 // Initialization
 (function(){
-  document.getElementById('siteName').textContent = CFG.site_name || "LONG BIO";
+  document.getElementById('siteName').textContent = "CHAOS LONG BIO";
   if(CFG.youtube_link) {
     document.getElementById('joinBtn').onclick = () => window.open(CFG.youtube_link, '_blank');
   }
@@ -302,6 +354,24 @@ const CFG = {{ config | tojson }};
       tList.appendChild(card);
     });
   }
+
+  // Generate Color Grid
+  const colors = [
+    {name: 'Red', hex: 'FF0000'}, {name: 'Orange', hex: 'FF8C00'}, {name: 'Gold', hex: 'FFD700'}, {name: 'Yellow', hex: 'FFFF00'},
+    {name: 'Lime', hex: '32CD32'}, {name: 'Green', hex: '00FF00'}, {name: 'Cyan', hex: '00FFFF'}, {name: 'Teal', hex: '008080'},
+    {name: 'Blue', hex: '0000FF'}, {name: 'Deep Blue', hex: '4169E1'}, {name: 'Purple', hex: '800080'}, {name: 'Magenta', hex: 'FF00FF'},
+    {name: 'Pink', hex: 'FF69B4'}, {name: 'White', hex: 'FFFFFF'}, {name: 'Silver', hex: 'C0C0C0'}, {name: 'Gray', hex: '808080'}
+  ];
+  
+  const cGrid = document.getElementById('colorGrid');
+  colors.forEach(c => {
+    let swatch = document.createElement('div');
+    swatch.className = 'color-swatch';
+    swatch.style.backgroundColor = '#' + c.hex;
+    swatch.title = c.name;
+    swatch.onclick = () => ins(`[${c.hex}]`);
+    cGrid.appendChild(swatch);
+  });
 })();
 
 let currentJwtToken = null;
@@ -438,5 +508,4 @@ function toast(msg){
 }
 </script>
 </body>
-                                                                                                                                         </html>
-                                                                                                                                         
+</html>
