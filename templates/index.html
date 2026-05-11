@@ -162,40 +162,6 @@ select.inp { appearance:none; cursor:pointer; }
 }
 .btn-primary:active { transform:scale(0.98); }
 
-/* OFFICIAL CHANNELS (SOCIALS) */
-.social-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
-.social-card {
-  background: var(--bg2);
-  border: 1px solid var(--bd);
-  border-radius: 12px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--txt);
-  transition: 0.2s;
-}
-.social-card:hover {
-  border-color: var(--acc);
-  background: var(--bg3);
-  transform: translateY(-2px);
-}
-.social-icon {
-  width: 40px; height: 40px; border-radius: 10px; 
-  display: flex; align-items: center; justify-content: center;
-}
-.social-icon svg { width: 22px; height: 22px; fill: #fff; }
-.social-text { display: flex; flex-direction: column; }
-.social-title { font-size: 0.95rem; font-weight: 700; }
-.social-sub { font-size: 0.7rem; color: var(--txt3); }
-
 /* TOAST & MODALS */
 #toast{position:fixed;top:-55px;left:50%;transform:translateX(-50%);background:var(--bg3);color:var(--acc);border:1px solid var(--acc);padding:9px 22px;border-radius:30px;font-weight:700;font-size:.86rem;z-index:9999;transition:top .3s;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.4)}
 .modal-bg{position:fixed;inset:0;z-index:800;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:.28s}
@@ -330,46 +296,6 @@ select.inp { appearance:none; cursor:pointer; }
       ⚡ UPDATE BIO
     </button>
     
-    <div class="sec-label" style="margin-top:30px;"><span>👥</span> OFFICIAL CHANNELS</div>
-    <div class="social-grid">
-      <a href="#" id="linkTelegram" target="_blank" class="social-card" style="display:none;">
-        <div class="social-icon" style="background:#0088cc;">
-          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12 6.63 0 12-5.37 12-12C24 5.37 18.63 0 12 0zm5.89 8.24l-1.97 9.28c-.14.65-.53.81-1.08.5l-2.97-2.19-1.43 1.38c-.16.16-.29.29-.6.29l.21-3.03 5.52-4.98c.24-.22-.05-.34-.37-.12l-6.82 4.29-2.94-.92c-.64-.2-.65-.64.13-.95l11.47-4.42c.53-.19 1.01.12.85.87z"/></svg>
-        </div>
-        <div class="social-text">
-          <span class="social-title">Telegram</span>
-          <span class="social-sub">Join Channel</span>
-        </div>
-      </a>
-      <a href="#" id="linkInstagram" target="_blank" class="social-card" style="display:none;">
-        <div class="social-icon" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </div>
-        <div class="social-text">
-          <span class="social-title">Instagram</span>
-          <span class="social-sub">Follow Us</span>
-        </div>
-      </a>
-      <a href="#" id="linkYouTube" target="_blank" class="social-card" style="display:none;">
-        <div class="social-icon" style="background:#FF0000;">
-          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff"/></svg>
-        </div>
-        <div class="social-text">
-          <span class="social-title">YouTube</span>
-          <span class="social-sub">Subscribe</span>
-        </div>
-      </a>
-      <a href="#" id="linkGitHub" target="_blank" class="social-card" style="display:none;">
-        <div class="social-icon" style="background:#333;">
-          <svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        </div>
-        <div class="social-text">
-          <span class="social-title">GitHub</span>
-          <span class="social-sub">Source Code</span>
-        </div>
-      </a>
-    </div>
-
     <div class="footer">DEVELOPED BY ANAND</div>
 
   </div>
@@ -408,28 +334,8 @@ const CFG = {{ config | tojson }};
 // Initialization
 (function(){
   document.getElementById('siteName').textContent = "CHAOS LONG BIO";
-  
-  // Set up Social Links if they exist in config.py
   if(CFG.youtube_link) {
     document.getElementById('joinBtn').onclick = () => window.open(CFG.youtube_link, '_blank');
-    let yt = document.getElementById('linkYouTube');
-    yt.href = CFG.youtube_link;
-    yt.style.display = 'flex';
-  }
-  if(CFG.telegram_link) {
-    let tg = document.getElementById('linkTelegram');
-    tg.href = CFG.telegram_link;
-    tg.style.display = 'flex';
-  }
-  if(CFG.instagram_link) {
-    let ig = document.getElementById('linkInstagram');
-    ig.href = CFG.instagram_link;
-    ig.style.display = 'flex';
-  }
-  if(CFG.create_own_video_link || CFG.github_link) { // Using create_own_video_link for Github for now
-    let gh = document.getElementById('linkGitHub');
-    gh.href = CFG.github_link || CFG.create_own_video_link; 
-    gh.style.display = 'flex';
   }
 
   // Load Templates
@@ -454,4 +360,152 @@ const CFG = {{ config | tojson }};
     {name: 'Red', hex: 'FF0000'}, {name: 'Orange', hex: 'FF8C00'}, {name: 'Gold', hex: 'FFD700'}, {name: 'Yellow', hex: 'FFFF00'},
     {name: 'Lime', hex: '32CD32'}, {name: 'Green', hex: '00FF00'}, {name: 'Cyan', hex: '00FFFF'}, {name: 'Teal', hex: '008080'},
     {name: 'Blue', hex: '0000FF'}, {name: 'Deep Blue', hex: '4169E1'}, {name: 'Purple', hex: '800080'}, {name: 'Magenta', hex: 'FF00FF'},
-    {name: 'Pink', hex: 'FF69B4'}, {name
+    {name: 'Pink', hex: 'FF69B4'}, {name: 'White', hex: 'FFFFFF'}, {name: 'Silver', hex: 'C0C0C0'}, {name: 'Gray', hex: '808080'}
+  ];
+  
+  const cGrid = document.getElementById('colorGrid');
+  colors.forEach(c => {
+    let swatch = document.createElement('div');
+    swatch.className = 'color-swatch';
+    swatch.style.backgroundColor = '#' + c.hex;
+    swatch.title = c.name;
+    swatch.onclick = () => ins(`[${c.hex}]`);
+    cGrid.appendChild(swatch);
+  });
+})();
+
+let currentJwtToken = null;
+
+function switchPage(pageId, btnEl) {
+  document.querySelectorAll('.page').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.bnav-item').forEach(el => el.classList.remove('active'));
+  document.getElementById('page-' + pageId).classList.add('active');
+  btnEl.classList.add('active');
+}
+
+function ins(tag){
+  let ta = document.getElementById('bioText');
+  let s = ta.selectionStart, e = ta.selectionEnd, v = ta.value;
+  let nv = v.slice(0,s) + tag + v.slice(e);
+  if(nv.length > 280){ toast('Bio too long!'); return; }
+  ta.value = nv;
+  ta.selectionStart = ta.selectionEnd = s + tag.length;
+  ta.focus();
+  updatePreview();
+}
+
+function updatePreview(){
+  let v = document.getElementById('bioText').value;
+  document.getElementById('charCount').textContent = v.length + '/280';
+  let p = document.getElementById('bioPreview');
+  p.innerHTML = v.trim() ? parseBio(v) : '<span style="color:var(--txt3); font-style:italic;">Type something above to see preview...</span>';
+}
+
+function parseBio(raw){
+  let s = raw.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  s = s.replace(/\[c\]\[([a-fA-F0-9]{6})\]/gi,'[$1]').replace(/\[\/c\]/gi,'').replace(/\[c\]/gi,'');
+  s = s.replace(/\[b\]/gi,'<b>').replace(/\[\/b\]/gi,'</b>').replace(/\[i\]/gi,'<i>').replace(/\[\/i\]/gi,'</i>').replace(/\[u\]/gi,'<u>').replace(/\[\/u\]/gi,'</u>');
+  let parts = s.split(/(\[[a-fA-F0-9]{6}\])/gi);
+  let html = '', open = false;
+  parts.forEach(p => {
+    let m = p.match(/^\[([a-fA-F0-9]{6})\]$/i);
+    if(m){ if(open) html+='</span>'; open=true; html+=`<span style="color:#${m[1].toUpperCase()}">`; }
+    else html += p.replace(/\n/g,'<br>');
+  });
+  if(open) html+='</span>';
+  return html;
+}
+
+async function pasteToken(){
+  try{ 
+    let t = await navigator.clipboard.readText(); 
+    document.getElementById('tokenInput').value = t; 
+    onTokenInput(); 
+  } catch(e){ toast('Long-press to paste'); }
+}
+
+function onTokenInput(){
+  let v = document.getElementById('tokenInput').value.trim();
+  if(v.length > 10){
+    clearTimeout(window._fetchTimer);
+    window._fetchTimer = setTimeout(()=>fetchPlayer(v), 800);
+  } else {
+    document.getElementById('playerInfo').style.display = 'none';
+  }
+}
+
+async function fetchPlayer(token){
+  try {
+    let res = await fetch('/api/verify-token', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({eat_token: token})
+    });
+    let d = await res.json();
+    if(d.success){
+      currentJwtToken = d.jwt_token;
+      document.getElementById('pUID').textContent = d.account.uid || 'Verified';
+      document.getElementById('playerInfo').style.display = 'block';
+      if(d.account.region) {
+        document.getElementById('regionSelect').value = d.account.region.toLowerCase();
+      }
+      toast('Token Verified!');
+    }
+  } catch(e) {}
+}
+
+async function applyBio(){
+  let token = document.getElementById('tokenInput').value.trim();
+  let bio = document.getElementById('bioText').value.trim();
+  let region = document.getElementById('regionSelect').value;
+  
+  if(!token){ toast('Paste your Access Token first!'); return; }
+  if(!bio){ toast('Enter bio text!'); return; }
+  
+  let btn = document.getElementById('applyBtn');
+  btn.innerHTML = '⌛ UPDATING...';
+  btn.disabled = true;
+  
+  try{
+    let jwt = currentJwtToken;
+    if(!jwt){
+      let vRes = await fetch('/api/verify-token', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({eat_token: token})
+      });
+      let vData = await vRes.json();
+      if(!vData.success) throw new Error(vData.error);
+      jwt = vData.jwt_token;
+    }
+    
+    let res = await fetch('/api/update-bio', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({jwt_token: jwt, bio: bio, region: region})
+    });
+    let d = await res.json();
+    
+    if(d.success){
+      document.getElementById('successModal').classList.add('show');
+    } else {
+      toast('Failed: ' + d.error);
+    }
+  } catch(e){ 
+    toast('Error: ' + e.message); 
+  } finally { 
+    btn.innerHTML = '⚡ UPDATE BIO'; 
+    btn.disabled = false; 
+  }
+}
+
+function closeModal(id){ document.getElementById(id).classList.remove('show'); }
+
+let _tt;
+function toast(msg){
+  let t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.top = '70px';
+  clearTimeout(_tt);
+  _tt = setTimeout(() => { t.style.top = '-55px'; }, 2500);
+}
+</script>
+</body>
+</html>
