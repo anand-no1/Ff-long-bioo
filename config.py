@@ -12,11 +12,11 @@ SITE_CONFIG = {
     "freefire_version": "OB53",
 
     # Social Links (Put your actual links inside the quotes to make the buttons appear!)
-    "youtube_link": "",
-    "instagram_link": "",
+    "youtube_link": "https://youtube.com/@am_anand?si=DQmK7Xaun3HTybpV",
+    "instagram_link": "https://www.instagram.com/anand_.xd21?igsh=YWV4dmkzNzJnbHB2",
     "telegram_link": "",
-    "github_link": "",
-    "freefire_link": "",  # <--- Added Free Fire Link here!
+    "github_link": "https://www.github.com/anand-no1",
+    "freefire_uid"-2095022296 (ANAND !!!)
 
     # Popup Settings
     "popup_title": "⚡ JOIN CHAOS SQUAD ",
