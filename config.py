@@ -11,6 +11,11 @@ SITE_CONFIG = {
     # Free Fire Version
     "freefire_version": "OB53",
 
+    # Social Links (Add your links here when ready)
+    "youtube_link": "",
+    "instagram_link": "",
+    "telegram_link": "",
+
     # Popup Settings
     "popup_title": "⚡ JOIN CHAOS SQUAD ",
     "popup_message": "Follow my socials to unlock the God-Level Bio Injector!",
@@ -22,7 +27,7 @@ SITE_CONFIG = {
     # Footer Credentials
     "footer_text": "Developed with 💻 by Anand Mitra (AM)",
 
-    # Video Tutorial Links 
+    # Video Tutorial Links (Add your links here when ready)
     "howto_video_link": "",
     "create_own_video_link": "",
 
