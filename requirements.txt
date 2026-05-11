@@ -7,3 +7,4 @@ protobuf
 Werkzeug
 pymongo
 apscheduler
+gunicorn
