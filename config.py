@@ -11,12 +11,6 @@ SITE_CONFIG = {
     # Free Fire Version
     "freefire_version": "OB53",
 
-    # Social Links (Put your actual links inside the quotes to make the buttons appear!)
-    "youtube_link": "https://youtube.com/@am_anand?si=DQmK7Xaun3HTybpV",
-    "instagram_link": "https://www.instagram.com/anand_.xd21?igsh=YWV4dmkzNzJnbHB2",
-    "telegram_link": "",
-    "github_link": "https://www.github.com/anand-no1",
-
     # Popup Settings
     "popup_title": "⚡ JOIN CHAOS SQUAD ",
     "popup_message": "Follow my socials to unlock the God-Level Bio Injector!",
