@@ -16,7 +16,6 @@ SITE_CONFIG = {
     "instagram_link": "https://www.instagram.com/anand_.xd21?igsh=YWV4dmkzNzJnbHB2",
     "telegram_link": "",
     "github_link": "https://www.github.com/anand-no1",
-    "freefire_uid"-2095022296 (ANAND !!!)
 
     # Popup Settings
     "popup_title": "⚡ JOIN CHAOS SQUAD ",
